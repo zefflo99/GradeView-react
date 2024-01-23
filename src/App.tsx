@@ -1,7 +1,5 @@
 import './App.css'
-import GradeNote from "./Component/GradeNote.tsx";
-import Semester from "./Component/Semester.tsx";
-
+import Subject from "./Component/Subject.tsx";
 
 
 export default function App() {
@@ -85,52 +83,7 @@ export default function App() {
           <h1 className="sr-only">Averages</h1>
           <div
               className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:gap-8">
-            <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-              <section aria-labelledby="section-1-title">
-                <h2 className="sr-only" id="section-1-title">Grades</h2>
-                <div className="overflow-hidden rounded-lg bg-white shadow">
-                  <div className="p-6">
-                    <div className="md:flex md:items-center md:justify-between">
-                      <div className="min-w-0 flex-1">
-                        <h2
-                            className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-                          Mathématiques
-                        </h2>
-                      </div>
-                      <div className="mt-4 flex md:ml-4 md:mt-0">
-                        <GradeNote grade={4} bold={true} big={true}/>
-                      </div>
-                    </div>
-                    <div className="mt-6 border-t border-gray-100">
-                      <dl className="divide-y divide-gray-100">
-                        <Semester numberSemester={20} grades={[1,2,3,4,5,6]}/>
-                        <div className="px-4 py-6 sm:gap-4 sm:px-0">
-                          <button
-                              type="button"
-                              className="relative block w-full rounded-lg border-2 border-dashed border-gray-300 p-4 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                            <svg className="mx-auto h-8 w-8 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                 fill="none"
-                                 viewBox="0 0 24 24"
-                                 stroke-width="1.5"
-                                 stroke="currentColor">
-                              <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-                              />
-                            </svg>
-                            <span
-                                className="mt-2 block text-sm font-semibold text-gray-900">Add semseter</span>
-                          </button>
-                        </div>
-
-
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
+            <Subject/>
 
             <div className="grid grid-cols-1 gap-4">
               <section aria-labelledby="section-2-title">
