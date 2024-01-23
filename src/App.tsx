@@ -142,7 +142,7 @@ export default function App() {
                     <div
                         className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-6 py-6">
                       <dt className="text-sm font-medium leading-6 text-gray-500">
-                        Inidmatique
+                        Informatique
                       </dt>
                       <dd className="text-xs font-medium text-green-600">
                         +10.18%

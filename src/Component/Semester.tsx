@@ -1,11 +1,13 @@
 import GradeNote from "./GradeNote.tsx";
 import InputValue from "./InputValue.tsx";
 import {useState} from "react";
-
+import {CalculateAverage, RoundNumber} from "../lib.ts";
 
 
 export default function Semester({numberSemester, grades}: {numberSemester:number, grades:number[]}) {
     const [input, setInput] = useState<number[]>(grades);
+    const average = RoundNumber(CalculateAverage(input), 0.5)
+
     return <div
         className="px-4 py-6 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-0">
         <dt className="text-sm font-medium text-gray-900 py-2">
@@ -25,7 +27,8 @@ export default function Semester({numberSemester, grades}: {numberSemester:numbe
                 <InputValue inputValue={(i: number) => {
                     setInput((j) => [...j, i])
                 }}/>
-                <GradeNote grade={0} bold={true} big={false}/>
+                {average == 0 ? "": <GradeNote grade={average} bold={true} big={false}/>}
+
             </div>
         </dd>
     </div>;
